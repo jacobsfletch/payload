@@ -1,6 +1,6 @@
 # Payload Redirects Example
 
-This example demonstrates how to implement http redirects into Payload using the official [Redirects Plugin](https://github.com/payloadcms/plugin-redirects).
+This example demonstrates how to implement http redirects in [Payload](https://github.com/payloadcms/payload) using the official [Redirects Plugin](https://github.com/payloadcms/plugin-redirects).
 
 There is a fully working Next.js app made explicitly for this example which can be found [here](../nextjs). Follow the instructions there to get started. If you are setting up redirects for another front-end, please consider contributing to this repo with your own example!
 

@@ -1,6 +1,6 @@
 # Payload Virtual Fields Example
 
-This example demonstrates how to implement virtual fields into Payload.
+This example demonstrates how to implement virtual fields in [Payload](https://github.com/payloadcms/payload).
 
 ## Quick Start
 

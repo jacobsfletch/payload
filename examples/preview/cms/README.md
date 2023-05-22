@@ -1,6 +1,6 @@
 # Payload Preview Example
 
-This example demonstrates how to implement preview into Payload using [Versions](https://payloadcms.com/docs/versions/overview) and [Drafts](https://payloadcms.com/docs/versions/drafts).
+This example demonstrates how to implement preview in [Payload](https://github.com/payloadcms/payload) using [Versions](https://payloadcms.com/docs/versions/overview) and [Drafts](https://payloadcms.com/docs/versions/drafts).
 
 There is a fully working Next.js app made explicitly for this example which can be found [here](../nextjs). Follow the instructions there to get started. If you are setting up preview for another front-end, please consider contributing to this repo with your own example!
 

@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload/types'
 
 import { admins } from './access/admins'
-import adminsAndUser from './access/adminsAndUser'
+import { adminsAndSelf } from './access/adminsAndSelf'
 import { anyone } from './access/anyone'
 import { checkRole } from './access/checkRole'
 import { loginAfterCreate } from './hooks/loginAfterCreate'
@@ -21,9 +21,9 @@ export const Users: CollectionConfig = {
     useAsTitle: 'email',
   },
   access: {
-    read: adminsAndUser,
+    read: adminsAndSelf,
     create: anyone,
-    update: adminsAndUser,
+    update: adminsAndSelf,
     delete: admins,
     admin: ({ req: { user } }) => checkRole(['admin'], user),
   },

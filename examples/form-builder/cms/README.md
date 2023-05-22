@@ -1,6 +1,6 @@
 # Payload Form Builder Example
 
-This example demonstrates how to implement the official [Form Builder Plugin](https://github.com/payloadcms/plugin-form-builder) into Payload.
+This example demonstrates how to implement the official [Form Builder Plugin](https://github.com/payloadcms/plugin-form-builder) in [Payload](https://github.com/payloadcms/payload).
 
 There is a fully working Next.js app made explicitly for this example which can be found [here](../nextjs). Follow the instructions there to get started. If you are setting up the form builder plugin for another front-end, please consider contributing to this repo with your own example
 
