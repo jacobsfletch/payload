@@ -1,0 +1,8 @@
+{
+  "/page": "/",
+  "/favicon.ico/route": "/favicon.ico",
+  "/[slug]/page": "/[slug]",
+  "/api/preview/route": "/api/preview",
+  "/api/exit-preview/route": "/api/exit-preview",
+  "/api/revalidate/route": "/api/revalidate"
+}
