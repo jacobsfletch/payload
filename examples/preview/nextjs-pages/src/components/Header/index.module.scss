@@ -11,8 +11,16 @@
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  gap: var(--base);
+
   a {
+    display: block;
     text-decoration: none;
-    margin-left: var(--base);
+  }
+
+  @include mid-break {
+    gap: calc(var(--base) / 2);
   }
 }
