@@ -1,0 +1,26 @@
+@use '../../css/queries.scss' as *;
+
+.header {
+  padding: var(--base) 0;
+  z-index: var(--header-z-index);
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--base);
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+
+  @include mid-break {
+    gap: calc(var(--base) / 2);
+  }
+}
