@@ -43,5 +43,5 @@ export async function GET(
 
   draftMode().enable()
 
-  redirect(`${url}/draft`)
+  redirect(url)
 }

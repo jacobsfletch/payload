@@ -1,3 +1,4 @@
+import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
 import { fetchPage, fetchPages } from '../cms'
@@ -21,6 +22,12 @@ export const PageTemplate: React.FC<{ page: Page | null | undefined }> = ({ page
 )
 
 export default async function Page({ params: { slug } }: PageParams) {
+  const { isEnabled: isDraftMode } = draftMode()
+
+  if (isDraftMode) {
+    return null
+  }
+
   const page = await fetchPage(slug || 'home')
 
   if (page === null) {
