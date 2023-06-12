@@ -96,6 +96,12 @@ async function refresh(incomingArgs: Arguments): Promise<Result> {
     args.res.cookie(`${config.cookiePrefix}-token`, refreshedToken, cookieOptions);
   }
 
+  let response: Result = {
+    user,
+    refreshedToken,
+    exp,
+  };
+
   // /////////////////////////////////////
   // After Refresh - Collection
   // /////////////////////////////////////
@@ -103,7 +109,7 @@ async function refresh(incomingArgs: Arguments): Promise<Result> {
   await collectionConfig.hooks.afterRefresh.reduce(async (priorHook, hook) => {
     await priorHook;
 
-    args = (await hook({
+    response = (await hook({
       req: args.req,
       res: args.res,
       exp,
@@ -115,11 +121,7 @@ async function refresh(incomingArgs: Arguments): Promise<Result> {
   // Return results
   // /////////////////////////////////////
 
-  return {
-    refreshedToken,
-    exp,
-    user: fieldsToSign,
-  };
+  return response;
 }
 
 export default refresh;
