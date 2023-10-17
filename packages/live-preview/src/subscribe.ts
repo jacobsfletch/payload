@@ -9,7 +9,6 @@ export const subscribe = <T>(args: {
   const { callback, depth, initialData, serverURL } = args
 
   const onMessage = async (event: MessageEvent) => {
-    console.log('hook received message')
     const mergedData = await handleMessage<T>({ depth, event, initialData, serverURL })
     callback(mergedData)
   }

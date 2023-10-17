@@ -3,8 +3,7 @@ import { mergeData } from '.'
 // This value will only come through on the initial message
 // Save it as a global variable when it arrive for reference later
 // Future message will not contain this value
-// TODO: type this from `fieldSchemaToJSON` return type
-let fieldSchemaJSON = undefined
+let fieldSchemaJSON = undefined // TODO: type this from `fieldSchemaToJSON` return type
 
 export const handleMessage = async <T>(args: {
   depth: number
@@ -20,8 +19,6 @@ export const handleMessage = async <T>(args: {
       if (!fieldSchemaJSON && eventData.fieldSchemaJSON) {
         fieldSchemaJSON = eventData.fieldSchemaJSON
       }
-
-      console.log('fieldSchemaJSON', fieldSchemaJSON)
 
       const mergedData = await mergeData<T>({
         depth,
